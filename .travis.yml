@@ -2,4 +2,4 @@ deploy:
   provider: heroku
   api_key:
     secure: "8d1c8162-24fb-41d7-83b1-8c850018eef4"
-      app: strv-addres-dobrzeniecki-jaku
+      app: strv-addres-dobrzeniecki-jakub
