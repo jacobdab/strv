@@ -1,0 +1,19 @@
+<% include ../partials/header%>
+
+<section class="login d-flex justify-content-center align-items-center mt-3 h-100 ">
+    <div class="form-box w-25 ">
+        <form method="post" action="/user/login">
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+    </div>
+
+</section>
+
+
+<% include ../partials/footer%>

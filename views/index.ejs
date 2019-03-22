@@ -1,0 +1,58 @@
+<% include ./partials/header %>
+
+<section id="addressBook" class="mt-5">
+    <div class="container">
+        <% if(!credit && typeof credit === 'undefined'){ %>
+            <div class="data bg-light my-5 py-3 rounded d-flex text-center align-items-center h-100">
+                <div class="col-lg-12" >
+                    <p class="lead">Please login first to see your contacts.</p>
+                </div>
+            </div>
+        <% }else{ %>
+            <div class="data bg-light my-5 py-3 rounded">
+                <a href="/addContact" class="btn btn-primary btn-sm  mt-2 ml-2">Add a New Contact</a>
+                <div class="col-lg-12 d-flex justify-content-center align-items-center h-100">
+                    <div class="row pt-3 w-100">
+                        <div class="col-lg-1 bg-secondary">
+                            Id
+                        </div>
+                        <div class="col-lg-3 bg-secondary">
+                            Name
+                        </div>
+                        <div class="col-lg-2 bg-secondary">
+                            Contact Number
+                        </div>
+                        <div class="col-lg-3 bg-secondary">
+                            Address
+                        </div>
+                        <div class="col-lg-3 bg-secondary">
+                            Email
+                        </div>
+                        <% i = 0 %>
+                        <% snap.forEach((snapE)=>{ %>
+                            <div class="col-lg-1 pt-3">
+
+                                <%= i++ %>
+                            </div>
+                            <div class="col-lg-3 pt-3">
+                                <%= snapE.val().clientName %>
+                            </div>
+                            <div class="col-lg-2 pt-3">
+                                <%= snapE.val().contact %>
+                            </div>
+                            <div class="col-lg-3 pt-3">
+                                <%= snapE.val().address %>
+                            </div>
+                            <div class="col-lg-3 pt-3">
+                                <%= snapE.val().email %>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</section>
+
+
+<% include ./partials/footer %>

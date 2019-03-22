@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+
+<section class="register d-flex justify-content-center align-items-center mt-3 h-100 ">
+    <div class="form-box w-25">
+        <form action="/user/register" method="post">
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+    </div>
+</section>
+
+
+<% include ../partials/footer %>
