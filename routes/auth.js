@@ -55,8 +55,8 @@ router.post('/login', (req, res) => {
                     return res.status(400).redirect('/user/login');
                 }
                 const token = jwt.sign(JSON.stringify(payload), process.env.SECRET);
-                //secure: true,
-                res.cookie('jwt', token, {httpOnly: true, expires: new Date(Date.now() + 3600000)});
+                //Delete secure on localhost
+                res.cookie('jwt', token, {httpOnly: true, secure: true, expires: new Date(Date.now() + 3600000)});
                 req.flash("success", 'Welcome back');
                 return res.status(200).redirect('/');
             });
